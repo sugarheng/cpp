@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\Student.obj",
+            "outputs": [
+                "x64\\Debug\\Student.h_6CF59ECF2DA15E19.ifc.dt.module.json",
+                "x64\\Debug\\Student.h_6CF59ECF2DA15E19.ifc.dt.d.json",
+                "x64\\Debug\\Student.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "D:\\Code\\VisualStudio\\cpp-couerse\\新建文件夹\\Project1\\Project1\\Student.h",
+                    "source-path": "d:\\code\\visualstudio\\cpp-couerse\\新建文件夹\\project1\\project1\\student.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
