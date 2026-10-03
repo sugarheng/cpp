@@ -18,18 +18,38 @@
     <ClInclude Include="Book.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Teacher.h">
+    <ClInclude Include="BorrowRecord.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Library.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <!-- ★修正12-c：与 .vcxproj 同步，Reader.h 归类到头文件 -->
+    <ClInclude Include="Reader.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Student.h">
-      <Filter>头文件</Filter>
+    <ClCompile Include="Book.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <!-- ★修正12-d：同步登记新建的两个源文件 -->
+    <ClCompile Include="BorrowRecord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
+    <ClCompile Include="Library.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Reader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

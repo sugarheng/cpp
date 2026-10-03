@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -128,12 +128,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
-    <ClInclude Include="Teacher.h" />
+    <ClInclude Include="BorrowRecord.h" />
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="Library.h" />
+    <!-- ★修正12-a：Reader.h 原来被误放到了下面的 ClCompile（=源文件）分组里，
+         于是 VS 把它当成一个独立的编译单元去编译，在 x64\Debug 下多产出
+         Reader.h.obj / Reader.h.ifc 这些莫名其妙的东西。
+         头文件应当归 ClInclude。 -->
+    <ClInclude Include="Reader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <!-- ★修正12-b：补上新建的两个实现文件。
+         它们必须出现在这里，VS 才会真正参与编译；
+         只在磁盘上放着、不写进 .vcxproj，编译器看不到，
+         Date / BorrowRecord 的函数依旧会全部"找不到定义"。 -->
+    <ClCompile Include="BorrowRecord.cpp" />
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Library.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Student.h" />
+    <ClCompile Include="Reader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

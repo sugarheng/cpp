@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include<string>
 using namespace std;
 
@@ -20,16 +20,16 @@ private:
 	BookStatus m_status;   //可借状态，由m_totalCount,m_availableCount可知
 	
 	//私有辅助函数，只对内使用，外面看不到
-	void refreshstatus();    //根据m_availableCount,刷新m_status
+	void refreshStatus();    //根据m_availableCount,刷新m_status
 
 public:
 	Book();
-	Book(const std::string& title,
-		const std::string& isbn,
-		const std::string& publisher,
-		double             price,
-		int                pages,
-		int                totalCount = 1);
+	Book(const string& title,
+		const string& isbn,
+		const string& publisher,
+		double price,
+		int pages,
+		int totalCount = 1);
 	~Book() = default;
 
 	string getTitle()     const { return m_title; }
@@ -55,11 +55,11 @@ public:
 	bool addCopies(int n);     // 增加 n 本馆藏
 	bool setOffline();         // 下架
 
-	// 【ISBN 合法性验证】这是阶段一明确点名的功能。
+	// 【ISBN 合法性验证】
 	//   规则：去掉 '-' 后必须是 10 位或 13 位数字。
-	static bool isValidIsbn(const std::string& isbn);
+	static bool isValidIsbn(const string& isbn);
 
-	// ---------- 输出 ----------
+	// 输出 
 	void print() const;
 
 };
